@@ -6,5 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'vim-syntastic/syntastic'
+
 call vundle#end()
 filetype plugin on
