@@ -6,7 +6,28 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin on
+
+set noswapfile
+
+" NERDTree Configuration
+
+" Open NERDTree if 'vim' is run without file arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close NERDTree if it's the last window
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+silent! map <F3> :NERDTreeFind<CR>
+silent! map <F4> :NERDTreeToggle<CR>
+
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeAutoDeleteBuffer = 1
