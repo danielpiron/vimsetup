@@ -8,6 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
@@ -31,3 +33,6 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeAutoDeleteBuffer = 1
+
+" Display status always
+set laststatus=2
