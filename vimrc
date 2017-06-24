@@ -48,7 +48,7 @@ nnoremap <silent> <leader>p :diffput<CR>
 
 " ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
 
-" +++ NERDTree +++ " 
+" +++ NERDTree +++ "
 
 " Open NERDTree if 'vim' is run without file arguments
 autocmd StdinReadPre * let s:std_in=1
