@@ -15,9 +15,17 @@ Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin on
 
+"
 " ...oooOOO+ GENERAL CONFIGURATION +OOOooo... "
+"
+let mapleader = ' '
 
 set noswapfile
+
+
+set list
+set listchars=tab:▸\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+nmap <leader>l :set list!<CR>
 
 
 " ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
