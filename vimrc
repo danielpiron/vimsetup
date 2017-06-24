@@ -35,7 +35,16 @@ set ignorecase
 set smartcase
 
 " Turn off highlighting with double space tap
-map <silent> <space><space> :noh<CR>
+nnoremap <silent> <space><space> :noh<CR>
+
+" Save the buffer with double esc tap
+nnoremap <silent> <esc><esc> :w<CR>
+
+" Move through buffers with left and right arrow keys
+nnoremap <silent> <left> :bprev<CR>
+nnoremap <silent> <right> :bnext<CR>
+
+nnoremap <silent> <leader>p :diffput<CR>
 
 " ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
 
