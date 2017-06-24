@@ -15,9 +15,14 @@ Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 filetype plugin on
 
+" ...oooOOO+ GENERAL CONFIGURATION +OOOooo... "
+
 set noswapfile
 
-" NERDTree Configuration
+
+" ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
+
+" +++ NERDTree +++ " 
 
 " Open NERDTree if 'vim' is run without file arguments
 autocmd StdinReadPre * let s:std_in=1
@@ -26,13 +31,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close NERDTree if it's the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-silent! map <F3> :NERDTreeFind<CR>
-silent! map <F4> :NERDTreeToggle<CR>
+map <silent> <F3> :NERDTreeFind<CR>
+map <silent> <F4> :NERDTreeToggle<CR>
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeAutoDeleteBuffer = 1
 
-" Display status always
+" +++ Airline +++ "
+
 set laststatus=2
