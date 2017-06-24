@@ -22,6 +22,8 @@ let mapleader = ' '
 
 set noswapfile
 
+set wildmenu
+set wildmode=longest:list,full
 
 set list
 set listchars=tab:▸\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
