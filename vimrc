@@ -29,6 +29,13 @@ set list
 set listchars=tab:▸\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 nmap <leader>l :set list!<CR>
 
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Turn off highlighting with double space tap
+map <silent> <space><space> :noh<CR>
 
 " ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
 
