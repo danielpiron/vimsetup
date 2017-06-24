@@ -6,6 +6,7 @@ call vundle#begin('~/vimplugins')
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
