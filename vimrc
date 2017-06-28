@@ -6,19 +6,28 @@ call vundle#begin('~/vimplugins')
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
-
 call vundle#end()
 filetype plugin on
 
 "
 " ...oooOOO+ GENERAL CONFIGURATION +OOOooo... "
 "
+"
+syntax on
+
+set autoindent
+set smartindent
+
+
+colorscheme molokai
+
 let mapleader = ' '
 
 set noswapfile
