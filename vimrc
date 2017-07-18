@@ -6,13 +6,16 @@ call vundle#begin('~/vimplugins')
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
+
 call vundle#end()
 filetype plugin on
 
@@ -24,6 +27,7 @@ syntax on
 
 set autoindent
 set smartindent
+set backspace=indent,eol,start
 
 
 colorscheme molokai
@@ -55,6 +59,8 @@ nnoremap <silent> <left> :bprev<CR>
 nnoremap <silent> <right> :bnext<CR>
 
 nnoremap <silent> <leader>p :diffput<CR>
+
+nnoremap <silent> <leader>f :%!clang-format -style=WebKit<CR>
 
 " ...oooOOO+ PLUGIN CONFIGURATION +OOOooo... "
 
